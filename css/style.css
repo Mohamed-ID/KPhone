@@ -1,0 +1,603 @@
+:root {
+    --toogle-Color: #33d2fd;
+    --parag-Color: #233148;
+}
+
+
+/* Header */
+header {
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+header .container nav ul {
+    gap: 20px;
+}
+
+header .container nav ul a {
+    color: white;
+    font-size: 18px;
+}
+
+header .container i {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    header .container img {
+        width: clamp(0.8rem, 80%, 100%);
+    }
+
+    header .container nav {
+        width: 0px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 999;
+        background-color: var(--toogle-Color);
+        background-image: linear-gradient(130deg, #0093E9 0%, #80D0C7 100%);
+        transition: width 0.9s ease;
+        overflow: hidden;
+    }
+    header .container nav.in {
+        width: 50%;
+    }
+
+    header .container nav i {
+        align-self: end;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    header .container nav ul {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    header .container nav ul li{
+        border-bottom: 2px solid white;
+        padding: 15px 10px;
+    }
+
+    header .container i {
+        display: block;
+        font-size: 1.2rem;
+        color: white;
+    }
+}
+
+/* Main */
+
+.parent main {
+    background-image: url(../assest/Background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 70vh;
+}
+
+.parent main .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    padding: 10vh 0;
+}
+
+.parent main .container h1,
+.parent main .container p {
+    padding: 0 40px;
+    text-align: center;
+    color: white;
+}
+
+.parent main .container h1 {
+    font-size: clamp(1rem, 2.5vw, 2.5rem);
+}
+
+.parent main .container p {
+    font-size: clamp(0.7rem, 1.5vw, 18px);
+}
+
+.parent main .container .btns {
+    display: flex;
+    gap: 15px;
+}
+
+.parent main .container .btns a:nth-child(1) {
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+}
+
+.parent main .container .btns a:nth-child(2) {
+    color: white;
+    border: 1px solid white;
+
+}
+
+.parent main .container .btns a:nth-child(1),
+.parent main .container .btns a:nth-child(2) {
+    text-align: center;
+    padding: 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.parent main .container .img {
+    width: 170px;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 574px) {
+    .parent main .container .img {
+        
+        margin: 40px 0;
+    }
+}
+.parent main .container .img img {
+    width: 100%;
+}
+
+/* End Main */
+
+/* Start Aboout Section */
+.parent section:nth-of-type(1) {
+    background-image: url(../assest/Background.png);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin: -50px 0;
+    position: relative;
+    z-index: 10;
+    top: -150px;
+    padding: 240px 0 110px;
+}
+.parent section:nth-of-type(1) .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+} 
+
+.parent section:nth-of-type(1) .container .img {
+    width: 250px;
+}
+.parent section:nth-of-type(1) .container .img img {
+    width: 170px;
+}
+
+.parent section:nth-of-type(1) .container .about-content {
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.parent section:nth-of-type(1) .container .about-content .box {
+    width: 100%;
+    height: 640px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.parent section:nth-of-type(1) .container .about-content .box:nth-child(2) {
+    justify-content: end;
+}
+
+.parent section:nth-of-type(1) .container .about-content .box .card {
+    width: 200px;
+    height: 240px;
+    padding: 30px;
+    gap: 10px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 10px 1px #dfdfdf;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.parent section:nth-of-type(1) .container .about-content .box .card:nth-child(1) {
+    align-self: flex-end;
+}
+
+.parent section:nth-of-type(1) .container .about-content .box .card img {
+    width: 30px;
+}
+
+.parent section:nth-of-type(1) .container .about-content .box .card h5 {
+    font-size: 12px;
+}
+
+.parent section:nth-of-type(1) .container .about-content .box .card p {
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--parag-Color);
+}
+
+@media (max-width: 768px) {
+    .parent section:nth-of-type(1) {
+        background-size: contain;
+        position: relative;
+    }
+    .parent section:nth-of-type(1)::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 85%;
+        background-color: #fafafc;
+        z-index: -500;
+    }
+    .parent section:nth-of-type(1) .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .parent section:nth-of-type(1) .container .img {
+        display: flex;
+        justify-content: center;
+    }
+    .parent section:nth-of-type(1) .container .about-content {
+        width: auto;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+    .parent section:nth-of-type(1) .container .about-content .box {
+        height: auto;
+        gap: 20px;
+    }
+}
+
+/* End Aboout Section */
+
+/* Start Info Section About*/
+.parent section:nth-of-type(2) {
+    margin: 50px 0;
+}
+
+.parent section:nth-of-type(2) .container .details {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 450px));
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.parent section:nth-of-type(2) .container .left-box {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    gap: 20px;
+}
+
+.parent section:nth-of-type(2) .container .left-box span {
+    display: block;
+    margin: 15px 0;
+    font-size: 28px;
+    font-weight: 800;
+    word-spacing: 1px;
+    color: var(--parag-Color);
+}
+
+.parent section:nth-of-type(2) .container .left-box p {
+    color: var(--parag-Color);
+    line-height: 1.6;
+}
+
+.parent section:nth-of-type(2) .container .left-box a {
+    align-self: end;
+    width: max-content;
+    color: white;
+    background-color: var(--toogle-Color);
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+
+.parent section:nth-of-type(2) .container .right-box .info {
+    display: grid;
+    grid-template-columns: 35px 1fr 20px;
+    gap: 20px;
+    padding: 20px 20px;
+    margin: 30px 0;
+    box-shadow: 0 5px 10px 2px #eee;
+    transition: all 0.4s ease;
+}  
+
+.parent section:nth-of-type(2) .container .right-box .info .icon {
+    display: flex;
+    justify-content: center;
+}
+
+.parent section:nth-of-type(2) .container .right-box .info .icon img {
+    align-self: start;
+}
+
+.parent section:nth-of-type(2) .container .right-box .info .content span {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--parag-Color);
+}
+
+.parent section:nth-of-type(2) .container .right-box .info .content p {
+    margin: 15px 0;
+    line-height: 1.5;
+    color: white;
+    display: none;
+    transition: all 0.4s ease;
+}
+
+.parent section:nth-of-type(2) .container .right-box .info.active {
+    background-color: var(--toogle-Color);
+}
+
+.parent section:nth-of-type(2) .container .right-box .info i {
+    align-self: start;
+    color: var(--parag-Color);
+    cursor: pointer;
+    transition: all 0.4 ease;
+}
+
+.parent section:nth-of-type(2) .container .right-box .info i.rt {
+    transition: all 0.4 ease;
+    rotate: -90deg;
+}
+
+.parent section:nth-of-type(2) .container .right-box .info.active p {
+    display: block;
+}
+
+.parent section:nth-of-type(2) .container .right-box .info.active i {
+    rotate: -90deg;
+}
+/* End Info Section About */
+
+/* Start Info Section App */
+
+.parent section:nth-of-type(3) {
+    margin: 50px 0 0;
+    background-color: #fafafc;
+}
+
+.parent section:nth-of-type(3) .container .app-sec {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 450px));
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 40px 0;
+}
+
+
+.parent section:nth-of-type(3) .container .img img {
+    width: 100%;
+}
+
+.parent section:nth-of-type(3) .container .app-for {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.parent section:nth-of-type(3) .container .app-for > span {
+    display: block;
+    margin: 15px 0;
+    font-size: 28px;
+    font-weight: 800;
+    word-spacing: 1px;
+    color: var(--parag-Color);
+}
+
+.parent section:nth-of-type(3) .container .app-for .device .android,
+.parent section:nth-of-type(3) .container .app-for .device .ios {
+    margin: 20px 0;
+}
+
+.parent section:nth-of-type(3) .container .app-for .device .android i,
+.parent section:nth-of-type(3) .container .app-for .device .ios i {
+    padding: 0 3px;
+    color: var(--toogle-Color);
+    font-size: 16px;
+}
+.parent section:nth-of-type(3) .container .app-for .device span {
+    font-weight: 600;
+}
+
+.parent section:nth-of-type(3) .container .app-for p {
+    color: var(--parag-Color);
+    line-height: 1.8;
+}
+
+
+/* End Info Section App */
+
+/* Start Platform Section */
+
+.parent section:nth-of-type(4) {
+    position: relative;
+    background-image: url(../assest/Vector\ Bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parent section:nth-of-type(4) .container .donwlaod-sec {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 450px));
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 40px 0;
+}
+
+.parent section:nth-of-type(4) .container .img {
+    display: flex;
+    justify-content: center;
+}
+
+.parent section:nth-of-type(4) .container .img img {
+    height: 100%;
+}
+
+.parent section:nth-of-type(4) .container .about-app {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.parent section:nth-of-type(4) .container .about-app span {
+    display: block;
+    font-size: 28px;
+    font-weight: 800;
+    word-spacing: 1px;
+    color: var(--parag-Color);
+}
+
+.parent section:nth-of-type(4) .container .about-app p {
+    color: white;
+    line-height: 1.8;
+    opacity: 0.95;
+}
+
+.parent section:nth-of-type(4) .container .about-app .platforms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.parent section:nth-of-type(4) > a {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, rgba(254, 117, 112, 1) 0%, rgba(246, 57, 125, 1) 100%);
+    padding: 20px 50px;
+}
+
+@media (max-width: 576px) {
+    .parent section:nth-of-type(4) > a {
+        font-size: 16px;
+        padding: 10px 30px;
+    }
+}
+
+/* End Platform Section */
+
+/* Start Footer */
+
+.parent footer {
+    margin-top: 80px;
+}
+.parent footer .links-menu {
+    display: flex;
+    justify-content: center;
+}
+
+.parent footer .links-menu > ul {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.parent footer .links-menu > ul > li {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.parent footer .links-menu > ul > li span {
+    color: var(--parag-Color);
+    font-weight: 600;
+}
+
+.parent footer .links-menu > ul li ul {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.parent footer .links-menu > ul li ul a {
+    color: var(--parag-Color);
+}
+
+.parent footer .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 70px;
+}
+
+.parent footer .contact span {
+    display: block;
+    font-size: 30px;
+    font-weight: 500;
+    word-spacing: 1px;
+    color: var(--parag-Color);
+}
+
+.parent footer .contact p {
+    color: #666666;
+    font-size: 14px;
+}
+
+.parent footer .contact .contact-in form {
+    display: flex;
+    gap: 30px;
+}
+
+.parent footer .contact input[type="email"] {
+    width: 500px;
+    background-color: #f6f7fb;
+    border: none;
+    padding: 15px 30px;
+    outline: none;
+}
+
+.parent footer .contact input[type="submit"] {
+    width: fit-content;
+    background-color: var(--toogle-Color);
+    border: none;
+    font-weight: 500;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 576px) {
+    .parent footer .contact .contact-in form {
+        flex-direction: column;
+        align-items: center;
+    }
+    .parent footer .contact input[type="email"] {
+        width: 300px;
+    }
+}
+
+.parent footer .copyright {
+    text-align: center;
+    color: white;
+    background-color: #233148;
+    padding: 30px 45px;
+    margin-top: 20px;
+}
+
+/* End Footer */

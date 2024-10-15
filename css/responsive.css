@@ -1,0 +1,74 @@
+/* media */
+.parent .container {
+  margin: 0px auto;
+}
+/* Small devices XXX (landscape phones, 240px and up) */
+@media (min-width: 240px) { 
+    .container {
+    width: 240px;
+    }
+}
+/* Small devices XX (landscape phones, 360px and up) */
+@media (min-width: 360px) { 
+    .container {
+    width: 350px;
+    }
+}
+
+/* Small devices X (landscape phones, 390px and up) */
+@media (min-width: 390px) { 
+    .container {
+    width: 380px;
+    }
+}
+
+  /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    .container {
+    width: 550px;
+    }
+}
+  /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .container {
+    width: 720px;
+    }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 998px) {
+    .container {
+    width: 980px;
+    }
+}
+
+  /* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+    width: 1100px;
+    }
+}
+
+  /* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .container {
+    width: 1350px;
+    }
+}
+
+/* All element */
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
